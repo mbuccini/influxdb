@@ -93,7 +93,7 @@
 ### Controls the clustering service configuration.
 ###
 
-# [coordinator]
+[coordinator]
   # The default time a write request will wait until a "timeout" error is returned to the caller.
   write-timeout = "10s"
 
@@ -128,12 +128,12 @@
 ### Controls the enforcement of retention policies for evicting old data.
 ###
 
-# [retention]
+[retention]
   # Determines whether retention policy enforcment enabled.
-  # enabled = true
+  enabled = true
 
   # The interval of time when retention policy enforcement checks run.
-  # check-interval = "30m"
+  check-interval = "30m"
 
 ###
 ### [shard-precreation]
@@ -163,7 +163,7 @@
 ### and a replication factor of 1, if it does not exist. In all cases the
 ### this retention policy is configured as the default for the database.
 
-# [monitor]
+[monitor]
   # Whether to record statistics internally.
   store-enabled = true
 
@@ -181,7 +181,7 @@
 ###
 ### NOTE: This interface is deprecated as of 1.1.0 and will be removed in a future release.
 
-# [admin]
+[admin]
   # Determines whether the admin service is enabled.
   enabled = true
 
@@ -201,7 +201,7 @@
 ### mechanism for getting data into and out of InfluxDB.
 ###
 
-# [http]
+[http]
   # Determines whether HTTP endpoint is enabled.
   enabled = true
 
@@ -222,7 +222,7 @@
 
   # Determines whether the pprof endpoint is enabled.  This endpoint is used for
   # troubleshooting and monitoring.
-  pprof-enabled = false
+  pprof-enabled = true
 
   # Determines whether HTTPS is enabled.
   https-enabled = false
@@ -326,7 +326,7 @@
 ###
 
 # [[collectd]]
-  enabled = false
+  # enabled = false
   # bind-address = ":25826"
   # database = "collectd"
   # retention-policy = ""
@@ -357,7 +357,7 @@
 ###
 
 # [[opentsdb]]
-  enabled = false
+  # enabled = false
   # bind-address = ":4242"
   # database = "opentsdb"
   # retention-policy = ""
@@ -388,7 +388,7 @@
 ###
 
 # [[udp]]
-  enabled = false
+  # enabled = false
   # bind-address = ":8089"
   # database = "udp"
   # retention-policy = ""
@@ -415,7 +415,7 @@
 ### Controls how continuous queries are run within InfluxDB.
 ###
 
-# [continuous_queries]
+[continuous_queries]
   # Determiens whether the continuous query service is enabled.
   enabled = true
 
